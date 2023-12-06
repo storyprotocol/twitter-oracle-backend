@@ -32,7 +32,7 @@ func NewTwitterEvent(ev *Events, addr string) (e *TwitterEvent, err error) {
 	e = &TwitterEvent{
 		ev:         ev,
 		Addr:       common.HexToAddress(addr),
-		BlockStart: 4803044, //-1,
+		BlockStart: -1,
 	}
 
 	e.ctx, e.cancel = context.WithCancel(context.Background())
